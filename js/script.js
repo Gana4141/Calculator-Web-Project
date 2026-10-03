@@ -1,0 +1,28 @@
+const display = document.getElementById("display");
+
+function appendValue(value) {
+    display.value += value;
+}
+
+function clearDisplay() {
+    display.value = "";
+}
+
+function deleteLast() {
+    display.value = display.value.slice(0, -1);
+}
+
+function calculate() {
+    try {
+        if (display.value.trim() === "") {
+            return;
+        }
+
+        // Convert percentage into decimal
+        let expression = display.value.replace(/(\d+(?:\.\d+)?)%/g, "($1/100)");
+
+        display.value = Function("return " + expression)();
+    } catch (error) {
+        display.value = "Error";
+    }
+}

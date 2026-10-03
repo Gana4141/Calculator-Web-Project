@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 360px;
+    padding: 25px;
+    background-color: #212529;
+    border-radius: 18px;
+}
+
+.calculator h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.display {
+    height: 65px;
+    font-size: 28px;
+    text-align: right;
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+.calculator button {
+    height: 55px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.calculator button:hover {
+    transform: scale(1.03);
+    transition: 0.1s;
+}
